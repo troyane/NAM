@@ -1,0 +1,10 @@
+{ Это - файл ресурсов, автоматически созданный lazarus }
+
+
+LazarusResources.Add('TfrmAbout','FORMDATA',[
+  'TPF0'#9'TfrmAbout'#8'frmAbout'#4'Left'#3'0'#1#6'Height'#3#167#0#3'Top'#3#219
+  +#0#5'Width'#3'0'#1#11'BorderIcons'#11#12'biSystemMenu'#0#11'BorderStyle'#7#8
+  +'bsDialog'#7'Caption'#6#27#208#159#209#128#208#190' '#209#128#208#190#208#183
+  +#209#128#208#190#208#177#208#189#208#184#208#186#208#176#10'LCLVersion'#6#8
+  +'0.9.28.2'#0#0
+]);

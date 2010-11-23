@@ -1,0 +1,300 @@
+object frmMain: TfrmMain
+  Left = 300
+  Height = 357
+  Top = 217
+  Width = 483
+  ActiveControl = memoDebug
+  Caption = 'Нормальні алгоритми Маркова'
+  ClientHeight = 341
+  ClientWidth = 483
+  DefaultMonitor = dmDesktop
+  Menu = MainMenu
+  OnCreate = FormCreate
+  Position = poDesktopCenter
+  LCLVersion = '0.9.28.2'
+  object lblAlphabet: TLabel
+    Left = 12
+    Height = 22
+    Top = 0
+    Width = 80
+    Caption = 'Алфавіт А'
+    Font.Height = -17
+    ParentColor = False
+    ParentFont = False
+  end
+  object lblTable: TLabel
+    Left = 12
+    Height = 22
+    Top = 104
+    Width = 180
+    Caption = 'Таблиця підстановок Т'
+    Font.Height = -17
+    ParentColor = False
+    ParentFont = False
+  end
+  object Bevel1: TBevel
+    Left = 224
+    Height = 336
+    Top = 0
+    Width = 10
+    Shape = bsRightLine
+  end
+  object sbtnNewRow: TSpeedButton
+    Left = 200
+    Height = 22
+    Top = 136
+    Width = 23
+    Caption = 'N'
+    Color = clBtnFace
+    NumGlyphs = 0
+    OnClick = sbtnNewRowClick
+  end
+  object sbtnDeleteRow: TSpeedButton
+    Left = 200
+    Height = 22
+    Top = 168
+    Width = 23
+    Caption = 'D'
+    Color = clBtnFace
+    NumGlyphs = 0
+    OnClick = sbtnDeleteRowClick
+  end
+  object sbtnUpRow: TSpeedButton
+    Left = 200
+    Height = 22
+    Top = 201
+    Width = 23
+    Caption = '/\'
+    Color = clBtnFace
+    NumGlyphs = 0
+    OnClick = sbtnUpRowClick
+  end
+  object sbtnDownRow: TSpeedButton
+    Left = 200
+    Height = 22
+    Top = 232
+    Width = 23
+    Caption = '\/'
+    Color = clBtnFace
+    NumGlyphs = 0
+    OnClick = sbtnDownRowClick
+  end
+  object lblComment: TLabel
+    Left = 14
+    Height = 14
+    Top = 322
+    Width = 169
+    Caption = '* останній рядок - кінцева заміна'
+    ParentColor = False
+  end
+  object btnAlphabetBlock: TSpeedButton
+    Left = 200
+    Height = 22
+    Top = 25
+    Width = 23
+    Caption = 'B'
+    Color = clBtnFace
+    NumGlyphs = 0
+    OnClick = btnAlphabetBlockClick
+  end
+  object btnAlphabetApply: TSpeedButton
+    Left = 200
+    Height = 22
+    Top = 56
+    Width = 23
+    Caption = 'A'
+    Color = clBtnFace
+    Font.Style = [fsBold]
+    NumGlyphs = 0
+    OnClick = btnAlphabetApplyClick
+    ParentFont = False
+  end
+  object btnTableApply: TSpeedButton
+    Left = 200
+    Height = 22
+    Top = 296
+    Width = 23
+    Caption = 'A'
+    Color = clBtnFace
+    Font.Style = [fsBold]
+    NumGlyphs = 0
+    OnClick = btnTableApplyClick
+    ParentFont = False
+  end
+  object btnTalbeBlock: TSpeedButton
+    Left = 200
+    Height = 22
+    Top = 264
+    Width = 23
+    Caption = 'B'
+    Color = clBtnFace
+    NumGlyphs = 0
+    OnClick = btnTalbeBlockClick
+  end
+  object lblSlovo: TLabel
+    Left = 248
+    Height = 22
+    Top = 0
+    Width = 114
+    Caption = 'Вхідне слово S'
+    Font.Height = -17
+    ParentColor = False
+    ParentFont = False
+  end
+  object btnSlovoApply: TSpeedButton
+    Left = 440
+    Height = 22
+    Top = 56
+    Width = 23
+    Caption = 'A'
+    Color = clBtnFace
+    Font.Style = [fsBold]
+    NumGlyphs = 0
+    OnClick = btnSlovoApplyClick
+    ParentFont = False
+  end
+  object btnSlovoBlock: TSpeedButton
+    Left = 440
+    Height = 22
+    Top = 25
+    Width = 23
+    Caption = 'B'
+    Color = clBtnFace
+    NumGlyphs = 0
+    OnClick = btnSlovoBlockClick
+  end
+  object Bevel2: TBevel
+    Left = 240
+    Height = 9
+    Top = 88
+    Width = 242
+    Shape = bsTopLine
+  end
+  object memoAplhabet: TMemo
+    Left = 7
+    Height = 56
+    Hint = 'В якості алфавіту можуть бути однозначні символи.'#13#10'Вводити їх в це поле можна через довільну кількість пробілів,'#13#10'або ж просто разом - без пробілів.'#13#10'Якщо потрібно, щоб символ пробілу належав до алфавіту - '#13#10'відмітьте відповідну опцію.'
+    Top = 24
+    Width = 185
+    ParentShowHint = False
+    ShowHint = True
+    TabOrder = 0
+    WantReturns = False
+  end
+  object sgTable: TStringGrid
+    Left = 9
+    Height = 192
+    Top = 128
+    Width = 183
+    ColCount = 3
+    Options = [goFixedVertLine, goFixedHorzLine, goVertLine, goHorzLine, goEditing, goRowSelect, goSmoothScroll]
+    RowCount = 2
+    TabOrder = 1
+    TitleFont.Style = [fsBold]
+    ColWidths = (
+      36
+      65
+      68
+    )
+    Cells = (
+      2
+      0
+      0
+      '№'
+      0
+      1
+      '1'
+    )
+  end
+  object chbProbil: TCheckBox
+    Left = 12
+    Height = 17
+    Top = 80
+    Width = 63
+    Caption = 'chbProbil'
+    TabOrder = 2
+  end
+  object memoDebug: TMemo
+    Left = 240
+    Height = 114
+    Top = 224
+    Width = 240
+    Lines.Strings = (
+      'memoDebug'
+    )
+    OnChange = memoDebugChange
+    OnClick = memoDebugClick
+    TabOrder = 3
+  end
+  object memoSlovo: TMemo
+    Left = 240
+    Height = 56
+    Hint = 'В якості алфавіту можуть бути однозначні символи.'#13#10'Вводити їх в це поле можна через довільну кількість пробілів,'#13#10'або ж просто разом - без пробілів.'#13#10'Якщо потрібно, щоб символ пробілу належав до алфавіту - '#13#10'відмітьте відповідну опцію.'
+    Top = 24
+    Width = 185
+    ParentShowHint = False
+    ShowHint = True
+    TabOrder = 4
+    WantReturns = False
+  end
+  object btnStart: TBitBtn
+    Left = 248
+    Height = 30
+    Top = 96
+    Width = 215
+    Caption = 'btnStart'
+    OnClick = btnStartClick
+    TabOrder = 5
+  end
+  object BitBtn1: TBitBtn
+    Left = 312
+    Height = 30
+    Top = 176
+    Width = 75
+    Caption = 'BitBtn1'
+    OnClick = BitBtn1Click
+    TabOrder = 6
+  end
+  object MainMenu: TMainMenu
+    left = 56
+    top = 32
+    object MenuItem1: TMenuItem
+      Caption = 'Файл'
+      OnClick = MenuItem1Click
+      object miLoadA: TMenuItem
+        Caption = 'Завантажити алфавіт А'
+        OnClick = miLoadAClick
+      end
+      object miLoadT: TMenuItem
+        Caption = 'Завантажити таблицю перетворень Т'
+      end
+      object miLoadS: TMenuItem
+        Caption = 'Завантажити вхідне слово S'
+      end
+      object MenuItem6: TMenuItem
+        Caption = '----------'
+        Enabled = False
+      end
+      object miSaveOutput: TMenuItem
+        Caption = 'Зберегти вихідне слово S`'
+      end
+      object MenuItem8: TMenuItem
+        Caption = '----------'
+        Enabled = False
+      end
+      object MenuItem9: TMenuItem
+        Caption = 'Вихід'
+        OnClick = MenuItem9Click
+      end
+    end
+    object MenuItem2: TMenuItem
+      Caption = 'Довідка'
+      object miAboutNAM: TMenuItem
+        Caption = 'Про нормальні алгоритми Маркова'
+      end
+      object miAbout: TMenuItem
+        Caption = 'Про програму'
+      end
+    end
+  end
+end

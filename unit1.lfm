@@ -1,0 +1,10 @@
+object frmAbout: TfrmAbout
+  Left = 304
+  Height = 167
+  Top = 219
+  Width = 304
+  BorderIcons = [biSystemMenu]
+  BorderStyle = bsDialog
+  Caption = 'Про розробника'
+  LCLVersion = '0.9.28.2'
+end
