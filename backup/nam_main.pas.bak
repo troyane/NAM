@@ -63,6 +63,7 @@ type
     procedure memoDebugChange(Sender: TObject);
     procedure memoDebugClick(Sender: TObject);
     procedure MenuItem1Click(Sender: TObject);
+    procedure MenuItem9Click(Sender: TObject);
     procedure miLoadAClick(Sender: TObject);
     procedure sbtnDeleteRowClick(Sender: TObject);
     procedure sbtnDownRowClick(Sender: TObject);
@@ -192,6 +193,11 @@ begin
 
 end;
 
+procedure TfrmMain.MenuItem9Click(Sender: TObject);
+begin
+  frmMain.Close;
+end;
+
 procedure TfrmMain.btnAlphabetApplyClick(Sender: TObject);
 var s : string;
 begin
@@ -278,7 +284,6 @@ begin
   end
   else
     ShowMessage('Ви не застосували слово!');
-
 end;
 
 procedure TfrmMain.btnTableApplyClick(Sender: TObject);

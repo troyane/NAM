@@ -87,6 +87,13 @@ implementation
 
 { TfrmMain }
 
+procedure zamina(var source : slovo; const jpos, jlength : integer;
+                 const what : slovo);
+Begin
+  delete(source, jpos, jlength);
+  Insert(what, source, jpos);
+end;
+
 function CheckSlovo(const s : slovo; const al : alphabet) : boolean;
 var res : boolean = true;
     i : integer;
@@ -274,8 +281,9 @@ begin
       end
       else
       begin
-        delete(S1, j, length(T[1, i]));
-        insert(T[2, i], S1, j);
+//        delete(S1, j, length(T[1, i]));
+//        insert(T[2, i], S1, j);
+        zamina(S1, j, length(T[1, i]), T[2, i]);
         memoDebug.Lines.Add(S1+' '+inttostr(i));
         i:=1;
       end;
@@ -284,7 +292,6 @@ begin
   end
   else
     ShowMessage('Ви не застосували слово!');
-
 end;
 
 procedure TfrmMain.btnTableApplyClick(Sender: TObject);
